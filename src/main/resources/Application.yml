@@ -9,6 +9,9 @@ spring:
     password: etoak
     hikari:
       maximum-pool-size: 50
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
 mybatis:
   mapper-location: classpath:mappers/*.xml
   type-aliases-packages: com.etoak.bean
