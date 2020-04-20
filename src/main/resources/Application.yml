@@ -1,0 +1,11 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /boot
+spring:
+  dataSource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: etoak
+    hikari:
+      maximum-pool-size: 50
