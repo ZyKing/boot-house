@@ -1,13 +1,10 @@
 package com.etoak.util;
 
 
-import com.etoak.bean.exception.ParamException;
+import com.etoak.exception.ParamException;
 import org.apache.commons.collections4.CollectionUtils;
-import org.hibernate.validator.internal.util.annotation.ConstraintAnnotationDescriptor;
 
 import javax.validation.*;
-import java.lang.invoke.ConstantCallSite;
-import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.Set;
 

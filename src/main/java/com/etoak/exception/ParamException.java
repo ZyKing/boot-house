@@ -1,4 +1,4 @@
-package com.etoak.bean.exception;
+package com.etoak.exception;
 
 public class ParamException extends RuntimeException{
     public ParamException(String message) {

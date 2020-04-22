@@ -1,4 +1,4 @@
-package com.etoak.bean.exception;
+package com.etoak.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
