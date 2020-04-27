@@ -1,6 +1,6 @@
 package com.etoak.controller;
 
-import com.etoak.Page;
+import com.etoak.bean.Page;
 import com.etoak.bean.House;
 import com.etoak.bean.HouseVo;
 import com.etoak.service.HouseService;
@@ -68,10 +68,18 @@ public class HouseController {
     @GetMapping(value = "/list",produces = "application/json;charset=utf-8")
     @ResponseBody
     public Page<HouseVo> queryList(@RequestParam(required = false,defaultValue = "1")int pageNum,
-                                   @RequestParam(required = false,defaultValue = "10") int pageSize,HouseVo houseVo){
+                                   @RequestParam(required = false,defaultValue = "2") int pageSize,
+                                   HouseVo houseVo,
+                                   @RequestParam(value="rentalList[]",required = false) String[] rentalList){
+                                   //前端向后端传数组
+                                   //@RequestParam("houseTypeList[]") String[] typeList){
 
-            log.info("pageNum - {}, pageSize - {}, houseVo - {}",pageNum,pageSize,houseVo);
-            return houseService.queryList(pageNum,pageSize,houseVo);
+            log.info("pageNum - {}, pageSize - {}, houseVo - {} ,rentalList - {}",pageNum,pageSize,houseVo,rentalList);
+            return houseService.queryList(pageNum,pageSize,houseVo,rentalList);
+    }
+    @RequestMapping("/toList")
+    public String toList(){
+        return "house/list";
     }
 
 }
